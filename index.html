@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>하늘 관측 웹앱 - 여러 천체 보기</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>하늘 관측 웹앱</h1>
+    <form id="skyForm">
+      <label for="latitude">위도 (Latitude):</label>
+      <input type="number" step="0.0001" id="latitude" name="latitude" required min="-90" max="90" />
+
+      <label for="longitude">경도 (Longitude):</label>
+      <input type="number" step="0.0001" id="longitude" name="longitude" required min="-180" max="180" />
+
+      <label for="datetime">날짜 및 시간 (YYYY-MM-DDTHH:MM):</label>
+      <input type="datetime-local" id="datetime" name="datetime" required />
+
+      <button type="submit">하늘 보기</button>
+    </form>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
